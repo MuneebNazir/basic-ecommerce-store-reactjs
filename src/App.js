@@ -3,6 +3,9 @@ import './App.css';
 import { Products } from './data/products-list';
 import React, { Component } from 'react';
 import { currency_options } from './data/static-content';
+import {Routes, Route} from 'react-router-dom';
+import Detail from './components/detail';
+import Default from './components/default';
 
 export default class App extends Component {
   constructor(props){
@@ -29,7 +32,11 @@ export default class App extends Component {
             })
           }
         </ul>
-        <CategoryList products={Products} />
+        <Routes>
+          <Route exact path="/" element={<CategoryList />}></Route>
+          <Route path="/details" element={<Detail />}></Route>
+          <Route component={Default}></Route>
+        </Routes>
       </div>
     );
   }
