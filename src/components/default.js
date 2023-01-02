@@ -12,7 +12,7 @@ export default function Default(props) {
                 <h2>page not found</h2>
                 <h3>
                 the requested URL
-                <span className="text-danger">"{props.location.pathname}"</span> was
+                {/* <span className="text-danger">"{props.location.pathname}"</span> was */}
                 not found
                 </h3>
             </div>

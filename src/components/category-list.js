@@ -13,7 +13,6 @@ export default class CategoryList extends Component {
               return value.products.map((product) => {
                 return (
                   <>
-                  <h3>Product</h3>
                   <ProductCard
                     style={{ height: "200px", width: "200px" }}
                     key={product.id}
