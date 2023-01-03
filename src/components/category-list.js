@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ProductCard from "./product-card";
 import { ProductConsumer } from "../context";
+import { createImpressionDataLayerObject } from "../utils/helpers";
 
 export default class CategoryList extends Component {
   render() {
@@ -10,6 +11,7 @@ export default class CategoryList extends Component {
         <div>
           <ProductConsumer>
             {(value) => {
+              console.log("Data Layer Impressions Object: ", createImpressionDataLayerObject("", "", value.products))
               return value.products.map((product) => {
                 return (
                   <>

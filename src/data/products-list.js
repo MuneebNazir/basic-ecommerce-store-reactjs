@@ -150,6 +150,7 @@ export const Products = [
     id: 1,
     name: "Google Pixel - Black",
     img: "images/mobiles/product-1.png",
+    skuId: "MJCN1H-L730",
     // price: {
     //     USD: 10,
     //     EUR: 9,
@@ -167,6 +168,7 @@ export const Products = [
     id: 2,
     name: "Samsung S7",
     img: "images/mobiles/product-2.png",
+    skuId: "MJCN1H-L730",
     // price: {
     //     USD: 16,
     //     EUR: 14,
@@ -184,6 +186,7 @@ export const Products = [
     id: 3,
     name: "HTC 10 - Black",
     img: "images/mobiles/product-3.png",
+    skuId: "MJCN1H-L730",
     // price: {
     //     USD: 8,
     //     EUR: 7.5,
@@ -201,6 +204,7 @@ export const Products = [
     id: 4,
     name: "HTC 10 - White",
     img: "images/mobiles/product-4.png",
+    skuId: "MJCN1H-L730",
     // price: {
     //     USD: 18,
     //     EUR: 16,
@@ -217,6 +221,7 @@ export const Products = [
   {
     id: 5,
     name: "HTC Desire 626s",
+    skuId: "MJCN1H-L730",
     img: "images/mobiles/product-5.png",
     // price: {
     //     USD: 24,
@@ -234,6 +239,7 @@ export const Products = [
   {
     id: 6,
     name: "Vintage Iphone",
+    skuId: "MJCN1H-L730",
     img: "images/mobiles/product-6.png",
     // price: {
     //     USD: 17,
@@ -253,6 +259,7 @@ export const Products = [
 export const detailProduct = {
   id: 1,
   title: "Google Pixel - Black",
+  skuId: "MJCN1H-L730",
   img: "images/mobiles/product-1.png",
   price: 10,
   company: "google",
