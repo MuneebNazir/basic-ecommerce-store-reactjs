@@ -1,16 +1,16 @@
 const createProductsListForDataLayer = (products, single = false) => {
   return single
-    ? { ...item, id: item.skuId, position: item.id }
+    ? { ...products, id: products.skuId, position: products.id }
     : products.map((item) => {
         return { ...item, id: item.skuId, position: item.id };
       });
 };
 
 const createCartProducts = (products) => {
-    return products.map((item) => {
-        return { ...item, id: item.skuId, quantity: item.count };
-      });
-}
+  return products.map((item) => {
+    return { ...item, id: item.skuId, quantity: item.count };
+  });
+};
 
 export const createImpressionDataLayerObject = (
   event = "impressions",
@@ -26,7 +26,12 @@ export const createImpressionDataLayerObject = (
   };
 };
 
-export const createProductClickObject = (event = "productClick", product) => {
+export const createProductClickObject = (
+  event = "productClick",
+  id,
+  products
+) => {
+  let product = products.find((item) => item.id === id);
   return {
     event: event,
     ecommerce: {
@@ -72,17 +77,17 @@ export const checkoutDataLayerObject = (
   currencyCode = "USD",
   products
 ) => {
-    return {
-        event: event,
-        ecommerce: {
-          currencyCode: currencyCode,
-          checkout: {
-            actionField:{
-                step: 1,
-                option: "CartPage",
-                products: createCartProducts(products)
-            }
-          }
+  return {
+    event: event,
+    ecommerce: {
+      currencyCode: currencyCode,
+      checkout: {
+        actionField: {
+          step: 1,
+          option: "CartPage",
+          products: createCartProducts(products),
         },
-      };
+      },
+    },
+  };
 };
